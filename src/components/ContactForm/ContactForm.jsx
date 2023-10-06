@@ -5,7 +5,7 @@ import { Form, Label, Button, Input} from './ContactForm.styled';
 import { addContact } from "../../redux/operations";
 // Импортируем хук
 import { useDispatch,useSelector } from "react-redux";
-import { getContacts} from "../../redux/selectors";
+import { selectContacts} from "../../redux/selectors";
 
 
 
@@ -13,7 +13,7 @@ export const ContactForm = () => {
 
    // Получаем ссылку на функцию отправки экшенов
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
     const handleSubmit = event => {
         event.preventDefault();

@@ -17,7 +17,7 @@ export const Filter = () =>{
         const form = event.target;
        
         const filter = form.value
-        console.log(filter);
+     
         dispatch(setStatusFilter(filter))
         }
   
