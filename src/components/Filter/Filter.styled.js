@@ -23,3 +23,9 @@ export const Title= styled.h2`
   letter-spacing: 2px;
   margin-bottom:20px;
 `;
+
+export const Wrapper= styled.div`
+ display: flex;
+ width:250px;
+ margin-left: 0px
+`;

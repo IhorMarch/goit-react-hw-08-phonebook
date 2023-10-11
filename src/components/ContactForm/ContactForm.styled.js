@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 
+export const Title= styled.h2`
+ text-align: center;
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-bottom:20px;
+`;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -9,6 +16,8 @@ export const Form = styled.form`
   margin:auto;
   border: 3px solid ;
   border-radius: 4px;
+  margin-bottom:20px;
+  margin-top:20px;
 `;
 
 export const Label = styled.label`

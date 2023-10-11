@@ -1,9 +1,7 @@
 
 import { GlobalStyle } from './GlobalStyles';
-
 import { useEffect,lazy } from "react";
 import { useDispatch } from "react-redux";
-
 import { Layout } from './Layout';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';

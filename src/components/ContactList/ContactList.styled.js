@@ -4,11 +4,12 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
 
-
+display:flex;
+flex-wrap:wrap;
   padding: 10px;
 margin-left:auto;
 margin-right:auto;
-width: 400px;
+width: 100%;
   font-size: 20px;
 `;
 

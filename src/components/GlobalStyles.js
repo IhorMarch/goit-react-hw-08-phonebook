@@ -16,7 +16,7 @@ code {
     monospace;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -28,8 +28,19 @@ img {
     object-fit: cover;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
 p {
   margin: 0px;
   padding: 0px;
+}
+
+a{
+text-decoration: none;
+
 }
 `;

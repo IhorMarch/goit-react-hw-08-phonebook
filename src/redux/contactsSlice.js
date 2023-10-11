@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {  persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
-import { fetchContacts,addContact,deleteContact } from "./operations";
+import { fetchContacts,addContact,deleteContact,toggleCompleted } from "./operations";
 
 
 const contactsInitialState =
@@ -32,11 +32,12 @@ const contactsSlice = createSlice({
     [fetchContacts.pending]: handlePending,
     [addContact.pending]: handlePending,
     [deleteContact.pending]: handlePending,
+    [toggleCompleted.pending]: handlePending,
    
     [fetchContacts.rejected]: handleRejected,
     [addContact.rejected]: handleRejected,
     [deleteContact.rejected]: handleRejected,
-    
+    [toggleCompleted.rejected]: handleRejected,
 
     [fetchContacts.fulfilled](state, action) {state.isLoading = false;
       state.error = null;
@@ -58,7 +59,14 @@ const contactsSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
-
+     [toggleCompleted.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      const index = state.items.findIndex(
+        contact => contact.id === action.payload.id
+      );
+      state.items.splice(index, 1, action.payload);
+    },
     },
 });
 

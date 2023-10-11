@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { SectionWrap, SectionTitle } from './Section.styled';
 
 
-export const Section = ({ title, children,titlefiltre }) => {
+export const Section = ({ children }) => {
   return (
     <SectionWrap>
-      <SectionTitle>{title}</SectionTitle>
+      <SectionTitle>Your Contacts</SectionTitle>
       {children}
     </SectionWrap>
   );

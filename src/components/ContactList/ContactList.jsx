@@ -2,6 +2,7 @@ import { List,Item } from './ContactList.styled';
 // Импортируем хук
 import { useSelector } from "react-redux";
 import { Contact } from '../Contact/Contact';
+import { Section } from '../Section/Section';
 import { selectVisibleContacts} from "../../redux/selectors";
  
 
@@ -17,7 +18,7 @@ export const ContactList = () => {
 // Вычисляем массив задач которые необходимо отображать в интерфейсе
 
   return (
-    
+    <Section>
      <List>
     {visibleContacts.map(contact => (
       <Item key={contact.id}>
@@ -25,7 +26,8 @@ export const ContactList = () => {
       </Item>
     
     ))}
-    </List>
+      </List>
+    </Section>
   )
 
 

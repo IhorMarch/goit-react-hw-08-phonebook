@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 export const SectionWrap = styled.section`
   margin: 0 auto;
+  width:1200 px;
 `;
 
 export const SectionTitle = styled.h2`
