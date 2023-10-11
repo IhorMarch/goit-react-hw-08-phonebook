@@ -1,7 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import {Form,Label} from './RegisterForm.styled';
-
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -29,12 +27,7 @@ function Copyright(props) {
   );
 }
 
-
-
 const defaultTheme = createTheme();
-
-
-
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -53,21 +46,6 @@ export const RegisterForm = () => {
   };
 
   
-    // <Form  onSubmit={handleSubmit} autoComplete="off">
-    //   <Label >
-    //     Username
-    //     <input type="text" name="name" />
-    //   </Label>
-    //   <Label >
-    //     Email
-    //     <input type="email" name="email" />
-    //   </Label>
-    //   <Label >
-    //     Password
-    //     <input type="password" name="password" />
-    //   </Label>
-    //   <button type="submit">Register</button>
-    // </Form>
 
   return (
 
@@ -154,6 +132,21 @@ export const RegisterForm = () => {
 
 
 
+    // <Form  onSubmit={handleSubmit} autoComplete="off">
+    //   <Label >
+    //     Username
+    //     <input type="text" name="name" />
+    //   </Label>
+    //   <Label >
+    //     Email
+    //     <input type="email" name="email" />
+    //   </Label>
+    //   <Label >
+    //     Password
+    //     <input type="password" name="password" />
+    //   </Label>
+    //   <button type="submit">Register</button>
+    // </Form>
 
 
 
